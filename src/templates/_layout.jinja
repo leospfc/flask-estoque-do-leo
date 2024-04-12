@@ -1,5 +1,5 @@
-{% from 'bootstrap5/utils.html' import render_icon %}
-{% from 'utils/menus.jinja' import barra_navegacao %}
+{% from 'bootstrap5/utils.html' import render_icon, render_messages %}
+{% from 'utils/menus.jinja' import barra_navegacao with context %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -13,6 +13,7 @@
 </head>
 <body id="page-top" class="d-flex flex-column min-vh-100 mx-2 mt-3">
 {{ barra_navegacao() }}
+{{ render_messages() }}
 {% if title %}
     <div class="jumbotron"><h1 class="display-4">{{ title }}</h1></div>
 {% endif %}
@@ -33,7 +34,7 @@
                     <a href="https://sjp.ifsp.edu.br/cursos-tecnicos/221-curso-tecnico-em-informatica"
                        target="_blank">Curso Técnico em Informática</a> do Instituto Federal de
                     Educação, Ciência e Tecnologia de São Paulo,
-                    <a href="https://sjp.ifsp.edu.br/" target="_blank">campus São José do Rio Preto</a>,
+                    <a href="https://sjp.ifsp.edu.br/" target="_blank">Campus São José do Rio Preto</a>,
                     durante o primeiro semestre de 2024</em>
                 </p>
             </div>
